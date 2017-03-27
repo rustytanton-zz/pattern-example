@@ -4,7 +4,7 @@ export class PluginRegistry {
     // create object observer
   }
   register (Module, name, namespace = 'bsp', load = 'immediately') {
-    // tell object observer to watch for data-[name]-[namespace]
+    // tell object observer to watch for data-[namespace]-[name]
     // load determines when to load, other possible values might be
     //   DOMReady, documentReady, windowReady
   }
@@ -18,7 +18,6 @@ export class PluginRegistry {
     // called from the object observer when an element
     // is inserted into the DOM
     //
-
   }
 }
 

@@ -1,3 +1,3 @@
 export function required {
-  // make sure a property is required
+  // throw an error if a required property isn't set
 }
