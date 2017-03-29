@@ -3,21 +3,21 @@ export class PluginRegistry {
     // create storage for plugins
     // create object observer
   }
-  register (Module, name, namespace = 'bsp', load = 'immediately') {
-    // tell object observer to watch for data-[namespace]-[name]
-    // load determines when to load, other possible values might be
-    //   DOMReady, documentReady, windowReady
+  register (Module, name, load = 'interactive') {
+    // tell object observer to watch for data-[name]
+    // load reflects either:
+    //   one of the states of document.readyState as a string (loading, interactive, complete)
+    //   or a function with an arbitrary condition that must return true before the plugin loads
   }
   load (plugin) {
     // plugin contains:
     //   el
     //   Module
     //   name
-    //   namespace
-    //   load config
-    // called from the object observer when an element
-    // is inserted into the DOM
+    //   load
     //
+    // called from the object observer when
+    // the load argument tells it to
   }
 }
 
