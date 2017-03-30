@@ -5,9 +5,9 @@
       {{settings}} is a helper that would write out options as attributes,
       so output here might look something like:
 
-      <div class="Module1" data-bsp-plugin="module-1" data-bsp-setting-foo="bar" data-bsp-setting-bar="foo">
+      <div class="Module1" data-bsp-setting-foo="bar" data-bsp-setting-bar="foo">
     --}}
-    <div class="{{blockName}}" data-bsp-plugin="module-1" {{settings}}>
+    <div class="{{blockName}}" {{settings}}>
     {{#defineBlockBody}}
       {{!-- content --}}
     {{/defineBlockBody}}

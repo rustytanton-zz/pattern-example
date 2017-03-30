@@ -8,17 +8,17 @@ import { Settings } from './Settings'
 // 2) choose which properties to expose as element attributes
 //
 // If you specified this element:
-// <div data-bsp-plugin="my-plugin" data-prop1="2"></div>
+// <div class="MyPlugin" data-prop1="2"></div>
 //
 // The plugin would load as expected, and only expose prop2
 // as an attribute because that's what you told it to do:
 //
-// <div data-bsp-plugin="my-plugin" data-prop2="a default string"></div>
+// <div class="MyPlugin" data-prop2="a default string"></div>
 //
 // If you loaded the element any of these ways:
-// <div data-bsp-plugin="my-plugin"></div>
-// <div data-bsp-plugin="my-plugin" data-prop1="some string"></div>
-// <div data-bsp-plugin="my-plugin" data-prop2="some string"></div>
+// <div class="MyPlugin"></div>
+// <div class="MyPlugin" data-prop1="some string"></div>
+// <div class="MyPlugin" data-prop2="some string"></div>
 //
 // The JS would throw an error.
 //
@@ -28,7 +28,7 @@ import { Settings } from './Settings'
 export class Module1Settings extends Settings {
   @required @type('number') prop1
   @attribute @type('string') prop2 = 'a default string'
-  @type('json') prop3
+  @type('boolean') prop3 = false
 }
 
 export class Module1 {
